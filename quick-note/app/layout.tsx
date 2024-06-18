@@ -4,6 +4,7 @@ import "./globals.css";
 import {ThemeProvider} from "@/app/components/theme-provider";
 import React from "react";
 import {Navbar} from "@/app/components/Navbar";
+import Header from "@/app/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
         >
-          <Navbar />
+          <Header />
           {children}
         </ThemeProvider>
       </body>

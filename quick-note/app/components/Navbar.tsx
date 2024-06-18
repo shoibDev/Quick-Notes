@@ -13,9 +13,7 @@ export function Navbar() {
                 <div className={"flex items-center gap-x-5"}>
                     <ThemeToggle />
 
-                    <div className={"flex items-center gap-x-5"}>
-                        <Button  />
-                    </div>
+
                 </div>
             </div>
         </nav>
