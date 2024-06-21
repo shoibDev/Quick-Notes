@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {createClient} from "@/utils/supabase/server";
 import {signOut} from "@/app/login/actions";
+import {ThemeToggle} from "@/app/components/theme-toggle";
 
 export default async function Header() {
     const [supabase] = await Promise.all([createClient()]);
@@ -17,7 +18,7 @@ export default async function Header() {
             <div className="container flex h-14 max-w-screen-2xl items-center">
                 <nav className="flex items-center space-x-4 lg:space-x-6">
                     <a className="mr-6 flex items-center space-x-2" href="/">
-                        <span className="font-bold">SupaNotes</span>
+                        <span className="font-bold">Supa<span className={"text-primary"}>Notes</span></span>
                     </a>
                     <Link href="/notes">notes</Link>
                 </nav>
@@ -32,6 +33,7 @@ export default async function Header() {
                             <Link href="/login">Sign In</Link>
                         </Button>
                     )}
+                    <ThemeToggle />
                 </div>
             </div>
         </header>

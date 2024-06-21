@@ -1,7 +1,7 @@
-//import { TodoList } from "@/components/todo-list";
 import { Separator } from "@/components/ui/separator";
 import {createClient} from "@/utils/supabase/server";
 import {redirect} from "next/navigation";
+import {NoteList} from "@/app/components/note-list";
 
 export default async function TodosPage() {
     const [supabase] = await Promise.all([createClient()]);
@@ -13,15 +13,15 @@ export default async function TodosPage() {
     if(!user) {
         return redirect('/login')
     }
-    const todos = ["This is a todo"];
+
+    const {data:notes} = await supabase
+        .from('notes')
+        .select('*')
+        .order('created_at', {ascending: false});
 
     return (
         <section className="p-3 pt-6 max-w-2xl w-full flex flex-col gap-4">
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-                Notes
-            </h1>
-            <Separator className="w-full " />
-            {/*<TodoList todos={todos ?? []} />*/}
+            <NoteList notes={notes ?? []} />
         </section>
     );
 }
