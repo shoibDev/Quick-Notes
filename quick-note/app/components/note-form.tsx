@@ -35,7 +35,7 @@ export function NoteForm({
 }) {
     const formRef = useRef<HTMLFormElement>(null);
     return (
-        <Card>
+        <Card className={"m-3"}>
             <CardContent className="p-3">
                 <form
                     ref={formRef}

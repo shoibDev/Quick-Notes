@@ -20,8 +20,11 @@ export default async function TodosPage() {
         .order('created_at', {ascending: false});
 
     return (
-        <section className="p-3 pt-6 max-w-2xl w-full flex flex-col gap-4">
-            <NoteList notes={notes ?? []} />
-        </section>
+        <div className="p-3">
+            <section className="flex-2">
+                <NoteList notes={notes ?? []}/>
+            </section>
+
+        </div>
     );
 }
