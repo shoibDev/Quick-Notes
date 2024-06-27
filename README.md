@@ -16,9 +16,9 @@ Welcome to SimpleNotes, an innovative and secure note-taking application that co
 
 ## Visuals
 
-![img.png](img.png)
+![image](https://github.com/shoibDev/Quick-Notes/assets/86535871/5b93dd18-e0b5-498d-8347-93149ad2d7f4)
 
-![img_1.png](img_1.png)
+![image](https://github.com/shoibDev/Quick-Notes/assets/86535871/bf887265-755c-48f2-93bc-8e037af16a32)
 
 ## Installation
 
